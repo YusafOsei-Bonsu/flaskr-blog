@@ -11,3 +11,4 @@ This is a Python project that concentrates on the creation of a basic blog appli
 ## Tech Stack
 
 - Python/Flask
+- SQLite
