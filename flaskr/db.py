@@ -4,6 +4,13 @@ import click
 from flask import current_app, g
 from flask.cli import with_appcontext
 
+# Registers the 'close_db' & 'init_db_command' functions with the application instance
+def init_app(app):
+    # Tells Flask to call that function when cleaning up after returning the response.
+    app.teardown_appcontext(close_db)
+    # Adds a new command that can be called with the flask command.
+    app.cli.add_command(init_db_command)
+
 # Connects to the database
 def get_db():
     if 'db' not in g:
