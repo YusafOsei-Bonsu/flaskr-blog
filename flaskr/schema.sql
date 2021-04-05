@@ -1,3 +1,4 @@
+-- Delete table if the table already exists
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS post;
 
