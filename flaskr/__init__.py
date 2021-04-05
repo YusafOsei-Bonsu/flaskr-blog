@@ -28,4 +28,7 @@ def create_app(test_config=None):
     def hello():
         return "Hello, I'm Yusaf & I am learning Flask"
 
+    from . import db
+    db.init_app(app)
+
     return app
